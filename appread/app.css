@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    bottom: 50px; /* Same value as #content-footer's height */
+    bottom: 0; /* Same value as #content-footer's height */
     overflow: auto; /* Enable scrollbars within main content section */
 }
 
