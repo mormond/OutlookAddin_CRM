@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
   <link href="../../Content/Office.css" rel="stylesheet" type="text/css" />
   <link href="../../bower_components/microsoft.office.js/styles/OfficeThemes.css" rel="stylesheet" type="text/css" />
-  <link href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" rel="stylesheet">
-  <!--<link href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" rel="stylesheet">-->
+  <link href="//appsforoffice.microsoft.com/fabric/1.0/fabric.css" rel="stylesheet">
+  <link href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" rel="stylesheet">
   <script src="//appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
 
   <!-- To enable offline debugging using a local reference to Office.js, use:                        -->
@@ -23,30 +25,58 @@
 
   <link href="Home.css" rel="stylesheet" type="text/css" />
   <script src="Home.js"></script>
+  <script src="jquery.pivot.js"></script>
 </head>
 
 <body>
   <div id="content-main">
-    <div class="padding">
-      <p><strong>Add home screen content here.</strong></p>
-      <p>For example, this app was activated with following details:</p>
-      <table id="details">
-        <tr>
-          <th>Subject:</th>
-          <td id="subject"></td>
-        </tr>
-        <tr>
-          <th>From:</th>
-          <td id="from"></td>
-        </tr>
-      </table>
+
+    <div class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12 block ms-font-xl">CRM Integration</div>
+      </div>
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12 block">
+          <ul class="ms-Pivot ms-Pivot--tabs">
+            <li id="customerTab" class="ms-Pivot-link is-selected">Customer</li>
+            <li id="ordersTab" class="ms-Pivot-link">Orders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="customer" class="ms-Grid">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Company Name</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span id="company"></span></div>
+        <div class="ms-Grid-col ms-u-sm6 block">&nbsp</div>
+      </div>
+
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Customer Name</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span id="lastName"></span>,<span id="firstName"></span></div>
+        <div class="ms-Grid-col ms-u-sm6 block">&nbsp</div>
+      </div>
+
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Customer Number</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span id="number"></span></div>
+        <div class="ms-Grid-col ms-u-sm6 block">&nbsp</div>
+      </div>
+
+    </div>
+
+    <div id="orders" class="ms-Grid hidden">
+      <div class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Customer Number</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Purchase Date</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Invoice Date</span></div>
+        <div class="ms-Grid-col ms-u-sm3 block"><span class="ms-fontColor-blueLight">Amount</span></div>
+      </div>
     </div>
   </div>
-  <div id="content-footer">
-    <div class="padding">
-      <a target="_blank" href="http://dev.office.com/code-samples#?filters=office%20add-ins">Find more samples online...</a>
-    </div>
-  </div>
+
+
 </body>
 
 </html>

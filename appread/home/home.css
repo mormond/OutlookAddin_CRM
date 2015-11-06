@@ -2,6 +2,7 @@
 
 #details {
     margin-left: 15px;
+    margin-right: 15px;
 }
 
     #details th {
@@ -17,3 +18,15 @@
     #from:focus, #from:hover, #from:active {
         color: #4ea2df;
     }
+
+.block {
+  padding: 10px;
+  border: 0px black solid;
+  text-align: left;
+  color:white;
+  background-color: gray;
+}
+
+.hidden {
+    display: none;
+}
