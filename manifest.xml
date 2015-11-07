@@ -6,7 +6,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CRM Integration"/>
   <Description DefaultValue="CRM Integration"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost/"/>
+  <!--<HighResolutionIconUrl DefaultValue="https://localhost/"/>-->
   <SupportUrl DefaultValue="http://localhost/"/>
   <Hosts>
     <Host Name="Mailbox"/>
