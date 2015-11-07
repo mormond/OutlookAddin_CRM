@@ -71,6 +71,16 @@
   
   function orderLookupCallback(result) {
     var orders = result;
+    
+    var lastOrder = 0;
+    
+    for (var index = 0; index < orders.length; index++) {
+      if (orders[index].PurchaseDate > lastOrder) {
+        lastOrder = orders[index].PurchaseDate; 
+      }
+    }
+    
+    $("#lastOrder").text(lastOrder);
 
     orders.forEach(function(element) {
 
