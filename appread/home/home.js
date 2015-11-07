@@ -89,8 +89,8 @@
       var row = $('<div class="ms-Grid-row"></div>');
 
       makeCell(element.CustomerId).appendTo(row);
-      makeCell(element.PurchaseDate).appendTo(row);
-      makeCell(element.InvoiceDate).appendTo(row);
+      makeCell(new Date(element.PurchaseDate).toDateString()).appendTo(row);
+      makeCell(new Date(element.InvoiceDate).toDateString()).appendTo(row);
       makeCell(element.TotalAmount).appendTo(row);
 
       row.appendTo($('#orders'));
