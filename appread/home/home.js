@@ -33,13 +33,13 @@
       $('#firstName').text(customer.firstName);
       $('#number').text(customer.customerId);
       
+      $("#customer").removeClass("hidden");
+      
       getOrders(customer.customerId);
    }
    else
    {
-      $("#customer").hide();
-      $("#orders").hide();
-      $("#uknownCustomer").show();
+      $("#uknownCustomer").removeClass("hidden");
    }
   }
     
