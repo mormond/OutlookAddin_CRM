@@ -23,8 +23,8 @@
   padding: 8px 4px 0 4px;
   border: 0px black solid;
   text-align: left;
-  color:white;
-  background-color: gray;
+  color: darkgray;
+  /*background-color: gray;*/
 }
 
 .hidden {
