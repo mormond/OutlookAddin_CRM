@@ -24,7 +24,7 @@
   
   function customerLookupCallback(result) {
    
-    spin8.stop(); 
+    //spin8.stop(); 
          
    if (result.length > 0) {    
       customer.lastName = result[0].LastName;
