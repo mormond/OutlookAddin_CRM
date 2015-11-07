@@ -60,7 +60,7 @@
   }
 
   function makeCell(text) {
-    var cell = $('<div class="ms-Grid-col ms-u-sm3 block"></div>');
+    var cell = $('<div class="ms-Grid-col ms-u-sm2 block"></div>');
     var span = $('<span></span>').text(text);
     span.appendTo(cell);
 
@@ -92,6 +92,7 @@
       makeCell(new Date(element.PurchaseDate).toDateString()).appendTo(row);
       makeCell(new Date(element.InvoiceDate).toDateString()).appendTo(row);
       makeCell(element.TotalAmount).appendTo(row);
+      $('<div class="ms-Grid-col ms-u-sm4 block"></div>').appendTo(row);
 
       row.appendTo($('#orders'));
 
