@@ -17,21 +17,24 @@
       var $pivotContainer = $(this);
 
       /** When clicking/tapping a link, select it. */
-      $pivotContainer.on('click', '.ms-Pivot-link', function(event) {
+      $pivotContainer.on('click', '.ms-Pivot-link', function (event) {
         event.preventDefault();
         $(this).siblings('.ms-Pivot-link').removeClass('is-selected');
         $(this).addClass('is-selected');
-        
-        if(this.id === "customerTab") {
-          $("#customer").show();
-          $("#orders").hide();          
+
+        if ($('#uknownCustomer').hasClass('hidden')) {
+
+          if (this.id === "customerTab") {
+            $("#customer").removeClass('hidden');
+            $("#orders").addClass('hidden');
+          }
+
+          if (this.id === "ordersTab") {
+            $("#customer").addClass('hidden');
+            $("#orders").removeClass('hidden');
+          }
         }
-        
-        if(this.id === "ordersTab") {
-          $("#customer").hide();
-          $("#orders").show();
-        }        
-        
+
       });
 
     });
