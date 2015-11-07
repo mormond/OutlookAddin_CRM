@@ -46,13 +46,38 @@
 
     <div id="uknownCustomer" class="ms-Grid hidden">
       <div class="ms-Grid-row">
-        <div class="ms-Grid-col ms-u-sm12 block"><span>Email address not recognised. Do you want to add this customer to CRM?</span></div>
+        <div class="ms-Grid-col ms-u-sm12 block"><span>Email address not recognised.</span></div>
         <div class="ms-Grid-col ms-u-sm12 block">
-          <button class="ms-Button">
-            <span class="ms-Button-label">Add New Customer</span>
+          <button id="addCustomer" class="ms-Button">
+            <span class="ms-Button-label">Add Customer to CRM?</span>
           </button>
         </div>
+      </div>
+    </div>
 
+    <div id="addCustomerDialog" class="ms-Dialog hidden">
+      <div class="ms-Overlay"></div>
+      <div class="ms-Dialog-main">
+        <button class="ms-Dialog-button ms-Dialog-button--close">
+          <i class="ms-Icon ms-Icon--x"></i>
+        </button>
+        <div class="ms-Dialog-header">
+          <p class="ms-Dialog-title">Add Customer</p>
+        </div>
+        <div class="ms-Dialog-inner">
+          <div class="ms-Dialog-content">
+            <p class="ms-Dialog-subText">Not implemented but this would add the customer to CRM.</p>
+          <div class="ms-Dialog-actions">
+            <div class="ms-Dialog-actionsRight">
+              <button id="addCustomerOk" class="ms-Dialog-action ms-Button ms-Button--primary">
+                <span class="ms-Button-label">OK</span>
+              </button>
+              <button id="addCustomerCancel" class="ms-Dialog-action ms-Button">
+                <span class="ms-Button-label">Cancel</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

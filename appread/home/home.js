@@ -18,6 +18,11 @@
 
       spin8 = fabric.Spinner(jQuery("#spinner-8point")[0]);
       //spin8.start();
+      
+      $("#addCustomer").click(function() { $("#addCustomerDialog").removeClass("hidden"); });
+      $("#addCustomerOk").click(function() { $("#addCustomerDialog").addClass("hidden"); });
+      $("#addCustomerCancel").click(function() { $("#addCustomerDialog").addClass("hidden"); });
+      
       displayItemDetails();
     });
   };
