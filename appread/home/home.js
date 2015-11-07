@@ -70,15 +70,7 @@
   function orderLookupCallback(result) {
     var orders = result;
     var lastOrder = new Date(1900, 1, 1);
-    
-    // for (var index = 0; index < orders.length; index++) {
-    //   
-    //   var orderDate = new Date(orders[index].PurchaseDate);     
-    //   if (orderDate > lastOrder) {
-    //     lastOrder = orderDate;
-    //   }
-    // }
-    
+
     orders.forEach(function (element) {
 
       var orderDate = new Date(element.PurchaseDate);
@@ -112,12 +104,8 @@
       });
   }
 
-
-  // Displays the "Subject" and "From" fields, based on the current mail item
   function displayItemDetails() {
     var item = Office.cast.item.toItemRead(Office.context.mailbox.item);
-
-    //jQuery('#subject').text(item.subject);
 
     var from;
     if (item.itemType === Office.MailboxEnums.ItemType.Message) {
@@ -127,13 +115,7 @@
     }
 
     if (from) {
-
       getCustomer(from.emailAddress);
-      
-      // jQuery('#from').text(from.displayName);
-      // jQuery('#from').click(function(){
-      //   app.showNotification(from.displayName, from.emailAddress);
-      // });
     }
   }
 })();
