@@ -17,13 +17,15 @@
         }
 
       spin8 = fabric.Spinner(jQuery("#spinner-8point")[0]);
-      spin8.start();
+      //spin8.start();
       displayItemDetails();
     });
   };
   
   function customerLookupCallback(result) {
    
+    spin8.stop(); 
+         
    if (result.length > 0) {    
       customer.lastName = result[0].LastName;
       customer.firstName = result[0].FirstName;
@@ -37,7 +39,6 @@
       $('#number').text(customer.customerId);
       
       $("#customer").removeClass("hidden");
-      spin8.stop();
       
       getOrders(customer.customerId);
    }
