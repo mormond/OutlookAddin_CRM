@@ -5,6 +5,7 @@
   var customerQuery = 'customer/';
   var orderQuery = 'order/'
   var customer = {};
+  var spin8 = fabric.Spinner(jQuery("#spinner-8point")[0]);
 
   // The Office initialize function must be run each time a new page is loaded
   Office.initialize = function(reason){
@@ -15,6 +16,7 @@
           $('.ms-Pivot').Pivot();
         }
 
+      spin8.start();
       displayItemDetails();
     });
   };
@@ -34,6 +36,7 @@
       $('#number').text(customer.customerId);
       
       $("#customer").removeClass("hidden");
+      spin8.stop();
       
       getOrders(customer.customerId);
    }
