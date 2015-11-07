@@ -35,6 +35,10 @@
       
       getOrders(customer.customerId);
    }
+   else
+   {
+      $('#company').text('Email address not recognised. Do you want to add this customer to CRM?');
+   }
   }
     
   function getCustomer(email) {
