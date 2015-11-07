@@ -37,7 +37,9 @@
    }
    else
    {
-      $('#company').text('Email address not recognised. Do you want to add this customer to CRM?');
+      $("#customer").hide();
+      $("#orders").hide();
+      $("#uknownCustomer").show();
    }
   }
     
