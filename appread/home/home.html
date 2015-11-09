@@ -30,6 +30,8 @@
 <body>
   <div id="content-main">
 
+    <!-- Header and pivot container -->
+    <!-- Uses UI Fabric pivot component -->
     <div class="ms-Grid" style="margin-bottom:12px">
       <div class="ms-Grid-row">
         <div class="ms-Grid-col ms-u-sm12 block ms-font-xl ms-fontColor-blueDark ms-fontWeight-semibold">CRM Integration</div>
@@ -44,6 +46,7 @@
       </div>
     </div>
 
+    <!-- Panel for unknown customer -->
     <div id="uknownCustomer" class="ms-Grid hidden">
       <div class="ms-Grid-row">
         <div class="ms-Grid-col ms-u-sm12 block"><span>Email address not recognised.</span></div>
@@ -55,6 +58,8 @@
       </div>
     </div>
 
+    <!-- Dialogue panel for UI to prompt to add new customer -->
+    <!-- Uses UI Fabric dialog component -->
     <div id="addCustomerDialog" class="ms-Dialog hidden">
       <div class="ms-Overlay"></div>
       <div class="ms-Dialog-main">
@@ -82,6 +87,8 @@
       </div>
     </div>
 
+    <!-- Customer panel uses -->
+    <!-- UI Fabric list item-->
     <div id="customer" class="ms-Grid hidden">
       <div class="ms-Grid-row">
         <div style="width:400px">
@@ -100,6 +107,7 @@
       </div>
     </div>
 
+    <!-- Order panel - added to dynamically -->
     <div id="orders" class="ms-Grid hidden">
       <div class="ms-Grid-row">
         <div class="ms-Grid-col ms-u-sm2 block"><span class="ms-fontColor-blueLight">Customer Number</span></div>

@@ -8,6 +8,7 @@
  * @param  {jQuery Object}  One or more .ms-Pivot components
  * @return {jQuery Object}  The same components (allows for chaining)
  */
+
 (function ($) {
   $.fn.Pivot = function () {
 
@@ -22,6 +23,7 @@
         $(this).siblings('.ms-Pivot-link').removeClass('is-selected');
         $(this).addClass('is-selected');
 
+        /* If the customer is unknown, no need to respond to the Pivot */
         if ($('#uknownCustomer').hasClass('hidden')) {
 
           if (this.id === "customerTab") {
