@@ -15,6 +15,8 @@
       spin8 = fabric.Spinner(jQuery("#spinner-8point")[0]);
       //spin8.start();
       
+      $addHandlers();
+      
       /* After initialisation, this is the entry point */
       checkCustomer();
     });
