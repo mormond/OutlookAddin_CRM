@@ -15,7 +15,7 @@
       spin8 = fabric.Spinner(jQuery("#spinner-8point")[0]);
       //spin8.start();
       
-      $addHandlers();
+      wireEventHandlers();
       
       /* After initialisation, this is the entry point */
       checkCustomer();
@@ -40,7 +40,7 @@
     }
   }
 
-  function addHandlers() {
+  function wireEventHandlers() {
     if ($.fn.Pivot) {
       $('.ms-Pivot').Pivot();
     }
